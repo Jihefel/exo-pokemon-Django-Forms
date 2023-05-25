@@ -1,0 +1,12 @@
+{% extends "base.html" %} 
+
+{% block content %}
+<h2>Pokémons</h2>
+<a href={% url 'add_pokemon' %}>Ajouter un Pokemon</a>
+<ul>
+  {% for pokemon in pokemons %}
+  <li>{{ pokemon.nom }} - {{ pokemon.type }} - {{ pokemon.niveau }}</li>
+  {% endfor %}
+</ul>
+
+{% endblock content %}
